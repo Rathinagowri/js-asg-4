@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<script language="JavaScript">
+
+function checkBrackets(str){
+      
+    var n = 0;
+    
+    for(var i in str){   
+        if(str[i] == '('){
+            
+            n ++;
+        } else if(str[i] == ')') {
+            
+            n --;
+        }  
+        
+        if (n < 0) return false;
+    }
+   
+    if(n > 0) return false;
+    
+    return true;
+}
+document.write(checkBrackets('( ( a + b ) / 5 abd )') + '<br>'); 
+document.write(checkBrackets(') ( a + b ) )')+ '<br>');  
+document.write(checkBrackets('( b * ( c + d *2 / ( 2 + ( 12 abc / ( a + 3 ) ) ) )')+ '<br>');
+
+
+</script>
+
+</html> 
